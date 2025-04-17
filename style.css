@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* 사진 */
+.picture {
+    width: 1920px;
+    height: 1280px;
+    position: absolute;
+    left: -239px;
+    top: -144px;
+    object-fit: cover;
+    aspect-ratio: 3/2;
+}
+
+/* 버튼들 */
+.home-button {
+    opacity: 0.5;
+    position: absolute;
+    inset: 0;
+    aspect-ratio: 1;
+}
+
+.change-button {
+    opacity: 0.5;
+    position: absolute;
+    inset: 0;
+    aspect-ratio: 1;
+}
+
+.left-button {
+    opacity: 0.5;
+    height: auto;
+    position: absolute;
+    left: 180px;
+    top: 847px;
+    transform: translate(-120px, 0px);
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+/* EYE */
+.in {
+    width: 275px;
+    height: 275px;
+    position: static;
+    z-index: 3;
+    pointer-events: visiblePainted;
+    cursor: pointer;
+}
+
+.iris {
+background: var(--right-grey, #F6F6F6);
+  border-radius: 50%;
+  border-style: solid;
+  border-color: var(--dark, #000000);
+  border-width: 4px;
+  width: 275px;
+  height: 275px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 중심 기준 정렬 유지 */
+  z-index: 2;
+
+  transform-origin: center;
+  transition: all 0.4s ease;
+}
+
+.iris:active {
+    filter: brightness(70%);
+}
+
+.pupil {
+    background: var(--dark, #000000);
+    border-radius: 50%;
+    border-style: solid;
+    border-color: var(--dark, #000000);
+    border-width: 4px;
+    width: 95.85px;
+    height: 95.85px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    transform-origin: center;
+    transition: transform 0.5s ease;
+}
+
+
+
+.out {
+    border-radius: 0px;
+    width: 638px;
+    height: 337px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+}
+
+.out path {
+    pointer-events: visiblePainted;
+    cursor: pointer;
+}
+
+
+
+/* 눈 주위 선들 */
+.line-1 {
+    border-radius: 50%;
+    border-style: solid;
+    border-color: var(--dark-grey, #9d9d9d);
+    border-width: 3px;
+    height: 800px;
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.line-2 {
+    border-radius: 50%;
+    border-style: solid;
+    border-color: var(--dark-grey, #9d9d9d);
+    border-width: 2px;
+    height: 1050px;
+    width: 1050px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.line-3 {
+    border-radius: 50%;
+    border-style: solid;
+    border-color: var(--dark-grey, #9d9d9d);
+    border-width: 1px;
+    height: 1300px;
+    width: 1300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out;
+}
+
+.line-1:hover, .line-2:hover, .line-3:hover {
+    border-color: #000000;
+    transition: transform 0.1s ease;
+}
+
+.blink-text {
+    color: var(--dark, #000000);
+    text-align: left;
+    font-family: "Helvetica-Bold", sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+  }
